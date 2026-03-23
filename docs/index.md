@@ -1,6 +1,6 @@
 # tf-module-pihole
 
-OpenTofu/Terraform modules for managing Pi-hole v6 as code using the [dklesev/pihole](https://registry.terraform.io/providers/dklesev/pihole/latest) provider.
+Terraform/OpenTofu modules for managing Pi-hole v6 as code using the [dklesev/pihole](https://registry.terraform.io/providers/dklesev/pihole/latest) provider.
 
 [:fontawesome-brands-github: GitHub](https://github.com/AutomationDojo/tf-module-pihole){ .md-button }
 
@@ -20,7 +20,7 @@ OpenTofu/Terraform modules for managing Pi-hole v6 as code using the [dklesev/pi
 
 | Name | Version |
 |------|---------|
-| OpenTofu | >= 1.0 |
+| Terraform / OpenTofu | >= 1.0 |
 | dklesev/pihole | ~> 1.0 |
 
 ## Provider Configuration
