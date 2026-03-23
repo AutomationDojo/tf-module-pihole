@@ -7,7 +7,7 @@ Manages Pi-hole privacy level and database retention settings.
 ```hcl
 module "privacy" {
   source  = "AutomationDojo/management/pihole//modules/privacy"
-  version = "1.0.3"
+  version = "1.0.4"
 
   privacy_level  = 0
   max_db_days    = 91

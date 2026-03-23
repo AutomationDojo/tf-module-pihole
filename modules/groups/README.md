@@ -7,7 +7,7 @@ Manages Pi-hole groups. Groups allow you to apply different blocking rules to di
 ```hcl
 module "groups" {
   source  = "AutomationDojo/management/pihole//modules/groups"
-  version = "1.0.3"
+  version = "1.0.4"
 
   groups = {
     Default = {

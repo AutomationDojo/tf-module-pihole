@@ -65,7 +65,7 @@ Each module can be used independently. Below is a complete example managing all 
 ```hcl
 module "groups" {
   source  = "AutomationDojo/management/pihole//modules/groups"
-  version = "1.0.3"
+  version = "1.0.4"
 
   groups = {
     Default = {
@@ -77,7 +77,7 @@ module "groups" {
 
 module "dns" {
   source  = "AutomationDojo/management/pihole//modules/dns"
-  version = "1.0.3"
+  version = "1.0.4"
 
   upstream_servers = [
     "8.8.8.8",
@@ -103,7 +103,7 @@ module "dns" {
 
 module "domains" {
   source  = "AutomationDojo/management/pihole//modules/domains"
-  version = "1.0.3"
+  version = "1.0.4"
 
   default_groups = [module.groups.group_ids["Default"]]
 
@@ -119,7 +119,7 @@ module "domains" {
 
 module "lists" {
   source  = "AutomationDojo/management/pihole//modules/lists"
-  version = "1.0.3"
+  version = "1.0.4"
 
   default_groups = [module.groups.group_ids["Default"]]
 
@@ -139,7 +139,7 @@ module "lists" {
 
 module "dhcp" {
   source  = "AutomationDojo/management/pihole//modules/dhcp"
-  version = "1.0.3"
+  version = "1.0.4"
 
   dhcp_settings = {
     active = true
@@ -160,7 +160,7 @@ module "dhcp" {
 
 module "privacy" {
   source  = "AutomationDojo/management/pihole//modules/privacy"
-  version = "1.0.3"
+  version = "1.0.4"
 
   privacy_level  = 0
   max_db_days    = 91
@@ -169,7 +169,7 @@ module "privacy" {
 
 module "webserver" {
   source  = "AutomationDojo/management/pihole//modules/webserver"
-  version = "1.0.3"
+  version = "1.0.4"
 
   interface_theme = "default-auto"
   interface_boxed = true

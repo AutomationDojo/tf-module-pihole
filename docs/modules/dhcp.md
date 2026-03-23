@@ -45,7 +45,7 @@ Manages Pi-hole DHCP server settings and static leases.
 module "dhcp" {
 <<<<<<< HEAD
   source  = "AutomationDojo/management/pihole//modules/dhcp"
-  version = "1.0.3"
+  version = "1.0.4"
 =======
   source = "github.com/AutomationDojo/terraform-pihole-management//modules/dhcp?ref=v1.0.3"
 >>>>>>> 743cf3ecb8b9be637178ea90767d8fe37cf58760
