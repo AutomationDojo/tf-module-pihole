@@ -1,9 +1,9 @@
 # terraform-pihole-management
 
+Terraform/OpenTofu modules for managing [Pi-hole v6](https://pi-hole.net/) as code using the [dklesev/pihole](https://registry.terraform.io/providers/dklesev/pihole/latest) provider.
+
 [![Registry](https://img.shields.io/badge/Terraform%20Registry-AutomationDojo%2Fmanagement%2Fpihole-purple)](https://registry.terraform.io/modules/AutomationDojo/management/pihole/latest)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-
-Terraform/OpenTofu modules for managing [Pi-hole v6](https://pi-hole.net/) as code using the [dklesev/pihole](https://registry.terraform.io/providers/dklesev/pihole/latest) provider.
 
 📖 **[Full documentation](https://pihole-terraform-module.automationdojo.org)**
 
