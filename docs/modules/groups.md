@@ -26,7 +26,8 @@ Manages Pi-hole groups. Groups allow you to apply different blocking rules to se
 
 ```hcl
 module "groups" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/groups?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/groups"
+  version = "1.0.3"
 
   groups = {
     Default = {

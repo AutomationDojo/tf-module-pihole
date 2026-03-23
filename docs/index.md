@@ -36,7 +36,8 @@ provider "pihole" {
 
 ```hcl
 module "groups" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/groups?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/groups"
+  version = "1.0.3"
 
   groups = {
     Default = { enabled = true, description = "The default group" }
@@ -44,7 +45,8 @@ module "groups" {
 }
 
 module "dns" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/dns?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/dns"
+  version = "1.0.3"
 
   upstream_servers = ["8.8.8.8", "8.8.4.4", "1.1.1.1", "1.0.0.1"]
 
@@ -56,7 +58,8 @@ module "dns" {
 }
 
 module "lists" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/lists?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/lists"
+  version = "1.0.3"
 
   default_groups = [0]
 

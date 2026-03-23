@@ -42,7 +42,8 @@ Manages Pi-hole DNS settings, upstream servers, and local DNS records (A and CNA
 
 ```hcl
 module "dns" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/dns?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/dns"
+  version = "1.0.3"
 
   upstream_servers = [
     "8.8.8.8",

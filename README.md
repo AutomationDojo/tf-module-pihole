@@ -36,7 +36,8 @@ provider "pihole" {
 
 ```hcl
 module "groups" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/groups?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/groups"
+  version = "1.0.3"
 
   groups = {
     Default = { enabled = true, description = "The default group" }
@@ -44,7 +45,8 @@ module "groups" {
 }
 
 module "dns" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/dns?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/dns"
+  version = "1.0.3"
 
   upstream_servers = ["8.8.8.8", "8.8.4.4", "1.1.1.1", "1.0.0.1"]
 
@@ -56,7 +58,8 @@ module "dns" {
 }
 
 module "lists" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/lists?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/lists"
+  version = "1.0.3"
 
   default_groups = [0]
 
@@ -69,7 +72,8 @@ module "lists" {
 }
 
 module "dhcp" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/dhcp?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/dhcp"
+  version = "1.0.3"
 
   dhcp_settings = {
     active  = true
@@ -89,7 +93,8 @@ module "dhcp" {
 }
 
 module "privacy" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/privacy?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/privacy"
+  version = "1.0.3"
 
   privacy_level  = 0
   max_db_days    = 91
@@ -97,7 +102,8 @@ module "privacy" {
 }
 
 module "webserver" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/webserver?ref=v1.0.2"
+  source  = "AutomationDojo/management/pihole//modules/webserver"
+  version = "1.0.3"
 
   interface_theme = "default-auto"
   interface_boxed = true
