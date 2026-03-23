@@ -1,3 +1,66 @@
+# dns
+
+Manages Pi-hole DNS settings, upstream servers, and local DNS records (A and CNAME).
+
+## Usage
+
+```hcl
+module "dns" {
+  source  = "AutomationDojo/management/pihole//modules/dns"
+  version = "1.0.3"
+
+  upstream_servers = [
+    "8.8.8.8",
+    "8.8.4.4",
+    "1.1.1.1",
+    "1.0.0.1",
+  ]
+
+  dns_settings = {
+    domain_name    = "lan"
+    bogus_priv     = true
+    listening_mode = "ALL"
+  }
+
+  a_records = {
+    "nas.lan" = "192.168.1.10"
+  }
+
+  cname_records = {
+    "media.lan" = "nas.lan"
+  }
+}
+```
+
+## Import
+
+DNS configuration:
+
+```hcl
+import {
+  to = module.dns.pihole_config_dns.settings[0]
+  id = "dns"
+}
+```
+
+Upstream servers (one block per server):
+
+```hcl
+import {
+  to = module.dns.pihole_dns_upstream.upstream["8.8.8.8"]
+  id = "8.8.8.8"
+}
+```
+
+Local A records:
+
+```hcl
+import {
+  to = module.dns.pihole_local_dns.a_records["nas.lan"]
+  id = "nas.lan/192.168.1.10"
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

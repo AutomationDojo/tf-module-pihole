@@ -7,13 +7,14 @@ plugins:
   - "@semantic-release/changelog"
   - - "@semantic-release/exec"
     - prepareCmd: |
-        find docs/ README.md -name "*.md" | xargs sed -i \
+        find docs/ modules/ README.md -name "*.md" | xargs sed -i \
           "s|version = \"[~> ]*[0-9]*\\.[0-9]*\\.[0-9]*\"|version = \"${nextRelease.version}\"|g"
   - - "@semantic-release/git"
     - assets:
         - CHANGELOG.md
         - docs/**/*.md
         - README.md
+        - modules/**/README.md
       message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
   - "@semantic-release/github"
 

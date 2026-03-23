@@ -1,3 +1,43 @@
+# privacy
+
+Manages Pi-hole privacy level and database retention settings.
+
+## Usage
+
+```hcl
+module "privacy" {
+  source  = "AutomationDojo/management/pihole//modules/privacy"
+  version = "1.0.3"
+
+  privacy_level  = 0
+  max_db_days    = 91
+  network_expire = 91
+}
+```
+
+### Privacy levels
+
+| Level | Description |
+|-------|-------------|
+| `0` | Show everything and record everything |
+| `1` | Hide domains — display and store all domains as `hidden` |
+| `2` | Hide domains and clients |
+| `3` | Anonymous mode — no history saved, no top lists |
+
+## Import
+
+```hcl
+import {
+  to = module.privacy.pihole_config_database.settings
+  id = "database"
+}
+
+import {
+  to = module.privacy.pihole_config_misc.settings
+  id = "misc"
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

@@ -1,3 +1,38 @@
+# groups
+
+Manages Pi-hole groups. Groups allow you to apply different blocking rules to different sets of clients.
+
+## Usage
+
+```hcl
+module "groups" {
+  source  = "AutomationDojo/management/pihole//modules/groups"
+  version = "1.0.3"
+
+  groups = {
+    Default = {
+      enabled     = true
+      description = "The default group"
+    }
+    kids = {
+      enabled     = true
+      description = "Children devices - stricter filtering"
+    }
+  }
+}
+```
+
+## Import
+
+Groups are imported by name:
+
+```hcl
+import {
+  to = module.groups.pihole_group.groups["Default"]
+  id = "Default"
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
