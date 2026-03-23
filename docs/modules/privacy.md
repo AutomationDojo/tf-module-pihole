@@ -32,7 +32,7 @@ Manages Pi-hole privacy level and database settings.
 
 ```hcl
 module "privacy" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/privacy?ref=v1.0.2"
+  source = "github.com/AutomationDojo/terraform-pihole-management//modules/privacy?ref=v1.0.3"
 
   privacy_level  = 0
   db_import      = true

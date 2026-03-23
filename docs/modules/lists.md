@@ -29,7 +29,7 @@ Manages Pi-hole adlist and allowlist subscriptions.
 
 ```hcl
 module "lists" {
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/lists?ref=v1.0.2"
+  source = "github.com/AutomationDojo/terraform-pihole-management//modules/lists?ref=v1.0.3"
 
   default_groups = [0]
 
