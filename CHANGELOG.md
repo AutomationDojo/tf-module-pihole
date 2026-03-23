@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/AutomationDojo/terraform-pihole-management/compare/v1.0.2...v1.0.3) (2026-03-23)
+
+### Bug Fixes
+
+* update docs [skip ci] ([2ac9ec0](https://github.com/AutomationDojo/terraform-pihole-management/commit/2ac9ec056a4d9b0c0b922b3ebaaa19aec857e93c))
+* use terraform registry format ([312e9f0](https://github.com/AutomationDojo/terraform-pihole-management/commit/312e9f092284504e12697c0f49d2edc175c4a65f))
+
 ## [1.0.2](https://github.com/AutomationDojo/tf-module-pihole/compare/v1.0.1...v1.0.2) (2026-03-23)
 
 ### Bug Fixes
