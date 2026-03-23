@@ -1,0 +1,31 @@
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_pihole"></a> [pihole](#requirement\_pihole) | ~> 1.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_pihole"></a> [pihole](#provider\_pihole) | ~> 1.0 |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_interface_boxed"></a> [interface\_boxed](#input\_interface\_boxed) | Use the boxed layout in the web interface | `bool` | `true` | no |
+| <a name="input_interface_theme"></a> [interface\_theme](#input\_interface\_theme) | Theme for the web interface (e.g. 'default-auto', 'default-light', 'default-dark') | `string` | `"default-auto"` | no |
+| <a name="input_session_restore"></a> [session\_restore](#input\_session\_restore) | Restore sessions on FTL restart | `bool` | `true` | no |
+| <a name="input_session_timeout"></a> [session\_timeout](#input\_session\_timeout) | Session timeout in seconds | `number` | `1800` | no |
+| <a name="input_threads"></a> [threads](#input\_threads) | Number of webserver worker threads | `number` | `50` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_interface_theme"></a> [interface\_theme](#output\_interface\_theme) | Configured web interface theme |
+| <a name="output_session_timeout"></a> [session\_timeout](#output\_session\_timeout) | Configured session timeout |
+<!-- END_TF_DOCS -->

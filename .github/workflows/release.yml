@@ -25,8 +25,8 @@ jobs:
         @semantic-release/git
         @semantic-release/exec
     secrets:
-      GITHUB_APP_ID: ${{ secrets.APP_ID }}
-      GITHUB_APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+      GITHUB_APP_ID: ${{ secrets.AUTOMATION_DOJO_APP_ID }}
+      GITHUB_APP_PRIVATE_KEY: ${{ secrets.AUTOMATION_DOJO_PRIVATE_KEY }}
 
   docs:
     needs: release
