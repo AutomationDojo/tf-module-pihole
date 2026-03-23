@@ -33,7 +33,7 @@ Manages Pi-hole privacy level and database settings.
 ```hcl
 module "privacy" {
   source  = "AutomationDojo/management/pihole//modules/privacy"
-  version = "1.0.5"
+  version = "1.0.6"
 
   privacy_level  = 0
   db_import      = true

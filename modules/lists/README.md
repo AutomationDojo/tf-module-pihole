@@ -7,7 +7,7 @@ Manages Pi-hole adlist and allowlist subscriptions.
 ```hcl
 module "lists" {
   source  = "AutomationDojo/management/pihole//modules/lists"
-  version = "1.0.5"
+  version = "1.0.6"
 
   default_groups = [0]
 

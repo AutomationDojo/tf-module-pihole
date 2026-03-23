@@ -7,7 +7,7 @@ Manages Pi-hole DNS settings, upstream servers, and local DNS records (A and CNA
 ```hcl
 module "dns" {
   source  = "AutomationDojo/management/pihole//modules/dns"
-  version = "1.0.5"
+  version = "1.0.6"
 
   upstream_servers = [
     "8.8.8.8",

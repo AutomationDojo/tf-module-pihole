@@ -31,7 +31,7 @@ Manages Pi-hole allow/deny domain entries (exact and regex).
 ```hcl
 module "domains" {
   source  = "AutomationDojo/management/pihole//modules/domains"
-  version = "1.0.5"
+  version = "1.0.6"
 
   default_groups = [0]
 
