@@ -30,7 +30,7 @@ Manages Pi-hole allow/deny domain entries (exact and regex).
 
 ```hcl
 module "domains" {
-  source = "path/to/modules/domains"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/domains?ref=v1.0.1"
 
   default_groups = [0]
 

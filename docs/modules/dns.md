@@ -42,7 +42,7 @@ Manages Pi-hole DNS settings, upstream servers, and local DNS records (A and CNA
 
 ```hcl
 module "dns" {
-  source = "path/to/modules/dns"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/dns?ref=v1.0.1"
 
   upstream_servers = [
     "8.8.8.8",

@@ -29,7 +29,7 @@ Manages Pi-hole adlist and allowlist subscriptions.
 
 ```hcl
 module "lists" {
-  source = "path/to/modules/lists"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/lists?ref=v1.0.1"
 
   default_groups = [0]
 

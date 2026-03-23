@@ -36,7 +36,7 @@ provider "pihole" {
 
 ```hcl
 module "groups" {
-  source = "path/to/modules/groups"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/groups?ref=v1.0.1"
 
   groups = {
     Default = { enabled = true, description = "The default group" }
@@ -44,7 +44,7 @@ module "groups" {
 }
 
 module "dns" {
-  source = "path/to/modules/dns"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/dns?ref=v1.0.1"
 
   upstream_servers = ["8.8.8.8", "8.8.4.4", "1.1.1.1", "1.0.0.1"]
 
@@ -56,7 +56,7 @@ module "dns" {
 }
 
 module "lists" {
-  source = "path/to/modules/lists"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/lists?ref=v1.0.1"
 
   default_groups = [0]
 
@@ -69,7 +69,7 @@ module "lists" {
 }
 
 module "dhcp" {
-  source = "path/to/modules/dhcp"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/dhcp?ref=v1.0.1"
 
   dhcp_settings = {
     active  = true
@@ -89,7 +89,7 @@ module "dhcp" {
 }
 
 module "privacy" {
-  source = "path/to/modules/privacy"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/privacy?ref=v1.0.1"
 
   privacy_level  = 0
   max_db_days    = 91
@@ -97,7 +97,7 @@ module "privacy" {
 }
 
 module "webserver" {
-  source = "path/to/modules/webserver"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/webserver?ref=v1.0.1"
 
   interface_theme = "default-auto"
   interface_boxed = true

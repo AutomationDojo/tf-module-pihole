@@ -34,7 +34,7 @@ Manages Pi-hole web interface and API settings.
 
 ```hcl
 module "webserver" {
-  source = "path/to/modules/webserver"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/webserver?ref=v1.0.1"
 
   interface_boxed = true
   interface_theme = "default-auto"

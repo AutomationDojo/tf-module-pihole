@@ -43,7 +43,7 @@ Manages Pi-hole DHCP server settings and static leases.
 
 ```hcl
 module "dhcp" {
-  source = "path/to/modules/dhcp"
+  source = "github.com/AutomationDojo/tf-module-pihole//modules/dhcp?ref=v1.0.1"
 
   dhcp_settings = {
     active  = true
