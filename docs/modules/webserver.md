@@ -34,12 +34,8 @@ Manages Pi-hole web interface and API settings.
 
 ```hcl
 module "webserver" {
-<<<<<<< HEAD
   source  = "AutomationDojo/management/pihole//modules/webserver"
   version = "1.0.5"
-=======
-  source = "github.com/AutomationDojo/terraform-pihole-management//modules/webserver?ref=v1.0.3"
->>>>>>> 743cf3ecb8b9be637178ea90767d8fe37cf58760
 
   interface_boxed = true
   interface_theme = "default-auto"
